@@ -1,10 +1,12 @@
+package problems.easy;
+
 import java.util.Map;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class RomanToInteger {
+public class P13 {
 
     private final Map<String, Integer> romanMap =
         Map.of("M", 1000, "D", 500, "C", 100, "L", 50, "X", 10, "V", 5, "I", 1);

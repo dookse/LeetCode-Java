@@ -1,4 +1,4 @@
-//Implement atoi which converts a string to an integer.
+package problems.easy;//Implement atoi which converts a string to an integer.
 //
 //    The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
 //
@@ -46,7 +46,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class StringtoInteger {
+public class P8 {
 
     public int myAtoi(final String str) {
         char[] input = str.trim().split(" ")[0].toCharArray();

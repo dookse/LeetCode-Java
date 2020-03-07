@@ -17,7 +17,6 @@ public class PlusOne {
         }
         int[] result = new int[digits.length + 1];
         result[0] = 1;
-        System.arraycopy(digits, 0, result, 1, result.length - 1);
         return result;
     }
 

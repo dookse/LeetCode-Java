@@ -17,7 +17,6 @@ public class P1134 {
         return sum == n;
     }
 
-
     @Test
     public void test1() {
         assertThat(isArmstrong(153)).isTrue();

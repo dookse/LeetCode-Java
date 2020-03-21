@@ -1,6 +1,7 @@
 package explore.arrayandstring;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
@@ -14,39 +15,28 @@ public class DiagonalTraverse {
         if (matrix == null || matrix.length == 0) {
             return new int[]{};
         }
-        boolean up = true;
-        int x = 0, y = 0;
-        int endY = matrix.length - 1;
-        int endX = matrix[0].length - 1;
-
-        List<Integer> resultList = new ArrayList<>();
-        resultList.add(matrix[0][0]);
-
-        while (x < endX || y < endY) {
-            if (up) {
-                if (x == endX) {
-                    up = false;
-                    y++;
-                } else if (y == 0) {
-                    up = false;
-                    x++;
-                } else {
-                    x++;
-                    y--;
-                }
-            } else if (y == endY) {
-                up = true;
-                x++;
-            } else if (x == 0) {
-                up = true;
-                y++;
-            } else {
-                y++;
+        int x, y, k = 0;
+        int endX = matrix[0].length;
+        int endY = matrix.length;
+        List<Integer> intermediate = new ArrayList<>();
+        int[] answer = new int[endX * endY];
+        for (int i = 0; i < endX + endY - 1; i++) {
+            intermediate.clear();
+            x = i < endX ? i : endX - 1;
+            y = i < endX ? 0 : i - endX + 1;
+            while (x >= 0 && y < endY) {
+                intermediate.add(matrix[y][x]);
                 x--;
+                y++;
             }
-            resultList.add(matrix[y][x]);
+            if (i % 2 == 0) {
+                Collections.reverse(intermediate);
+            }
+            for (final Integer num : intermediate) {
+                answer[k++] = num;
+            }
         }
-        return resultList.stream().mapToInt(o -> o).toArray();
+        return answer;
     }
 
 
@@ -78,6 +68,12 @@ public class DiagonalTraverse {
     public void test5() {
         int[] result = findDiagonalOrder(new int[][]{{1, 2}, {3, 4}});
         assertThat(result).isEqualTo(new int[]{1, 2, 3, 4});
+    }
+
+    @Test
+    public void test6() {
+        int[] result = findDiagonalOrder(new int[][]{{2, 5}, {8, 4}, {0, -1}});
+        assertThat(result).isEqualTo(new int[]{2, 5, 8, 0, 4, -1});
     }
 
 

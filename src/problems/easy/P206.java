@@ -38,34 +38,36 @@ public class P206 {
         assertThat(actual).isEqualTo(resultList);
     }
 
+    public static class ListNode {
+
+        int val;
+        ListNode next;
+
+        ListNode(final int x) {
+            val = x;
+        }
+
+        @Override
+        public boolean equals(final Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            ListNode listNode = (ListNode) o;
+            return val == listNode.val &&
+                Objects.equals(next, listNode.next);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(val, next);
+        }
+    }
+
 }
 
-class ListNode {
 
-    int val;
-    ListNode next;
-
-    ListNode(final int x) {
-        val = x;
-    }
-
-    @Override
-    public boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        ListNode listNode = (ListNode) o;
-        return val == listNode.val &&
-            Objects.equals(next, listNode.next);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(val, next);
-    }
-}
 
 

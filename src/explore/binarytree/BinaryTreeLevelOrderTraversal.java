@@ -3,6 +3,7 @@ package explore.binarytree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import org.junit.Test;
 
@@ -33,7 +34,7 @@ public class BinaryTreeLevelOrderTraversal {
 
     public List<List<Integer>> levelOrder2(final TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        LinkedList<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
             List<Integer> levelNodes = new ArrayList<>();

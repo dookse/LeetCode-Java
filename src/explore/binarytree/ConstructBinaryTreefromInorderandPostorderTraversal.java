@@ -2,9 +2,10 @@ package explore.binarytree;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import org.junit.Test;
+
+import lombok.EqualsAndHashCode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -74,7 +75,7 @@ public class ConstructBinaryTreefromInorderandPostorderTraversal {
         assertThat(buildTree(inorder, postorder)).isEqualTo(root);
     }
 
-
+    @EqualsAndHashCode
     static class TreeNode {
 
         int val;
@@ -85,23 +86,9 @@ public class ConstructBinaryTreefromInorderandPostorderTraversal {
             val = x;
         }
 
-        @Override
-        public boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            TreeNode node = (TreeNode) o;
-            return val == node.val &&
-                Objects.equals(left, node.left) &&
-                Objects.equals(right, node.right);
+        protected boolean canEqual(final Object other) {
+            return other instanceof TreeNode;
         }
 
-        @Override
-        public int hashCode() {
-            return Objects.hash(val, left, right);
-        }
     }
 }

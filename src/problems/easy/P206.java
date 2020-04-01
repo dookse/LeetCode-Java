@@ -1,8 +1,8 @@
 package problems.easy;
 
-import java.util.Objects;
-
 import org.junit.Test;
+
+import lombok.EqualsAndHashCode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -38,6 +38,7 @@ public class P206 {
         assertThat(actual).isEqualTo(resultList);
     }
 
+    @EqualsAndHashCode
     public static class ListNode {
 
         int val;
@@ -45,24 +46,6 @@ public class P206 {
 
         ListNode(final int x) {
             val = x;
-        }
-
-        @Override
-        public boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (o == null || getClass() != o.getClass()) {
-                return false;
-            }
-            ListNode listNode = (ListNode) o;
-            return val == listNode.val &&
-                Objects.equals(next, listNode.next);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(val, next);
         }
     }
 

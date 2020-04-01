@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import lombok.EqualsAndHashCode;
+import explore.binarytree.model.TreeNode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -73,22 +73,5 @@ public class ConstructBinaryTreefromInorderandPostorderTraversal {
         root.right.left = new TreeNode(5);
         root.right.right = new TreeNode(6);
         assertThat(buildTree(inorder, postorder)).isEqualTo(root);
-    }
-
-    @EqualsAndHashCode
-    static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
-
-        protected boolean canEqual(final Object other) {
-            return other instanceof TreeNode;
-        }
-
     }
 }

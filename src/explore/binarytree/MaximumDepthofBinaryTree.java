@@ -4,6 +4,8 @@ import java.util.Stack;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MaximumDepthofBinaryTree {
@@ -52,14 +54,4 @@ public class MaximumDepthofBinaryTree {
         assertThat(maxDepth(root)).isEqualTo(3);
     }
 
-    static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
-    }
 }

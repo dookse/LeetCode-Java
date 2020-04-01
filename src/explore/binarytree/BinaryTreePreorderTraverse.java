@@ -7,6 +7,8 @@ import java.util.Stack;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BinaryTreePreorderTraverse {
@@ -51,17 +53,6 @@ public class BinaryTreePreorderTraverse {
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
         assertThat(preorderTraversal(root)).isEqualTo(Arrays.asList(1, 2, 4, 5, 3, 6, 7));
-    }
-
-    public static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
     }
 }
 

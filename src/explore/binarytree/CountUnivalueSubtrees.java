@@ -2,6 +2,8 @@ package explore.binarytree;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CountUnivalueSubtrees {
@@ -66,15 +68,4 @@ public class CountUnivalueSubtrees {
         assertThat(countUnivalSubtrees(root)).isEqualTo(6);
     }
 
-
-    static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
-    }
 }

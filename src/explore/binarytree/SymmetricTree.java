@@ -5,6 +5,8 @@ import java.util.Queue;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SymmetricTree {
@@ -114,17 +116,6 @@ public class SymmetricTree {
         root.right.right.right = new TreeNode(4);
 
         assertThat(isSymmetric(root)).isTrue();
-    }
-
-    static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
     }
 
 }

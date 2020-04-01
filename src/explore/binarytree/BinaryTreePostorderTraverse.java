@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BinaryTreePostorderTraverse {
@@ -74,15 +76,5 @@ public class BinaryTreePostorderTraverse {
         assertThat(postorderTraversal(root)).isEqualTo(Arrays.asList(4, 5, 2, 6, 7, 3, 1));
     }
 
-    public static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
-    }
 }
 

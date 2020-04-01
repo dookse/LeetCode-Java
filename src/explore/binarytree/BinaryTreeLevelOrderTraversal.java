@@ -7,6 +7,8 @@ import java.util.Queue;
 
 import org.junit.Test;
 
+import explore.binarytree.model.TreeNode;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class BinaryTreeLevelOrderTraversal {
@@ -89,15 +91,4 @@ public class BinaryTreeLevelOrderTraversal {
         ));
     }
 
-
-    public static class TreeNode {
-
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(final int x) {
-            val = x;
-        }
-    }
 }

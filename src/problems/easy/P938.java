@@ -64,15 +64,16 @@ public class P938 {
         assertThat(rangeSumBST(root, 7, 15)).isEqualTo(32);
     }
 
-}
+    static class TreeNode {
 
-class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(final int x) {
-        val = x;
+        TreeNode(final int x) {
+            val = x;
+        }
     }
 }
+
+

@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-// 1021. Remove Outermost Parentheses
-public class P1021 {
+// 1389. Create Target Array in the Given Order
+public class P1389 {
 
     public int[] createTargetArray(int[] nums, int[] index) {
         List<Integer> list = new ArrayList<>(nums.length);

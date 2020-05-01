@@ -1,4 +1,4 @@
-package explore.challenge30day.week1;
+package explore.challenge30day.april.week1;
 
 import org.junit.Test;
 

@@ -1,10 +1,10 @@
-package explore.challenge30day.week3;
+package explore.challenge30day.april.week3;
 
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import explore.challenge30day.week3.model.BinaryMatrix;
+import explore.challenge30day.april.week3.model.BinaryMatrix;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

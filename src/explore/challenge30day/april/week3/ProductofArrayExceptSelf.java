@@ -1,4 +1,4 @@
-package explore.challenge30day.week3;
+package explore.challenge30day.april.week3;
 
 public class ProductofArrayExceptSelf {
 

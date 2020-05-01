@@ -1,4 +1,4 @@
-package explore.challenge30day.week2;
+package explore.challenge30day.april.week2;
 
 import java.util.Arrays;
 
